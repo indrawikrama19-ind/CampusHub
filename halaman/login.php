@@ -1,22 +1,31 @@
+
 <?php
 session_start();
 include "../koneksi/koneksi.php";
+
 /** @var \mysqli $koneksi */
+
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    
-$query = mysqli_query($koneksi, "SELECT*FROM user where studentId = '$username'and  password='$password'");
-    if(mysqli_num_rows($query) > 0){
-         $data = mysqli_fetch_array($query);
+
+    $query = mysqli_query($koneksi, "SELECT * FROM user WHERE studentId = '$username' AND password = '$password'");
+
+    if (mysqli_num_rows($query) > 0) {
+        $data = mysqli_fetch_assoc($query);
+
         $_SESSION['user'] = $data;
-        echo'<script>
-            alert("Selamat datang, ' . $data['fullName'] . '");
-            window.location.href = "dashboard.php";
-            </script>';
-        }else {
-            echo '<script>alert("username/password salah!"); window.location.href = "login.php";</script>';
-        } 
+
+        header("Location: dashboard.php");
+        exit;
+
+    } else {
+        echo '<script>
+            alert("Username atau password salah!");
+            window.location.href = "login.php";
+        </script>';
+        exit;
+    }
 }
 ?>
 
