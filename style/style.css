@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* { 
+    box-sizing: border-box; 
+}
+
+body { 
+    margin: 0; 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    background-color: #f8fafc; 
+    color: #0f172a; 
+    line-height: 1.6;
+}
+
+.container { 
+    width: 90%; 
+    max-width: 920px; 
+    margin: auto; 
+    padding: 32px 0;
+}
+
+/* ======================================================
+   NAVBAR
+   ====================================================== */
+
+.navbar { 
+    background: #ffffff; 
+    padding: 18px 8%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05); 
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.logo { 
+    font-size: 22px; 
+    font-weight: 800; 
+    color: #4f46e5; /* Electric Indigo */
+    letter-spacing: -0.5px;
+}
+
+.navbar a { 
+    text-decoration: none; 
+    margin-left: 24px; 
+    color: #64748b; 
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #4f46e5;
+}
+
+/* ======================================================
+   CARDS & CONTAINERS
+   ====================================================== */
+
+.card, .login, .auth-card { 
+    background: #ffffff; 
+    padding: 36px; 
+    margin: 24px auto; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.08); 
+    border: 1px solid #f1f5f9;
+}
+
+.login { max-width: 420px; }
+.auth-card { max-width: 480px; }
+
+/* ======================================================
+   FORM STYLING
+   ====================================================== */
+
+.wellcome, .auth-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+.deskripsi, .auth-subtitle {
+    color: #64748b;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+input, .form-group input { 
+    width: 100%; 
+    padding: 14px 16px; 
+    border: 1.5px solid #e2e8f0; 
+    border-radius: 12px; 
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.2s ease-in-out;
+    background-color: #f8fafc;
+}
+
+input:focus, .form-group input:focus {
+    outline: none;
+    border-color: #e54646;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+}
+
+/* ======================================================
+   BUTTONS
+   ====================================================== */
+
+button, .btn { 
+    display: inline-block;
+    padding: 13px 26px; 
+    border: none; 
+    border-radius: 12px; 
+    background: #eb9b9b; 
+    color: #c72424; 
+    cursor: pointer; 
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+button:hover, .btn:hover { 
+    background: #d61e1e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgb(255, 0, 0);
+}
+
+/* ======================================================
+   EVENT CARDS
+   ====================================================== */
+
+.event { 
+    background: #ffffff; 
+    padding: 28px; 
+    margin: 20px 0; 
+    border-radius: 16px; 
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    transition: all 0.2s ease-in-out;
+}
+
+.event:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.08);
+    border-color: #e2e8f0;
+}
+
+.event h3 { 
+    margin-top: 0; 
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.event p {
+    margin: 6px 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ======================================================
+   TIKET DIGITAL BADGE
+   ====================================================== */
+
+.ticket-badge {
+    background: #f0fdf4;
+    border: 2px dashed #86efac;
+    padding: 16px;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #166534;
+    text-align: center;
+    margin: 18px 0;
+}
+
+/* ======================================================
+   FOOTER & UTILITY
+   ====================================================== */
+
+.login-footer, .auth-footer {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.login-footer a, .auth-footer a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover, .auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.error { 
+    color: #ef4444; 
+    background: #fef2f2;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #fee2e2;
+    font-size: 14px;
+    margin-bottom: 16px; 
+}
+
+.success { 
+    color: #16a34a; 
+    font-weight: 700; 
+}
+
+.center { 
+    text-align: center; 
+}
