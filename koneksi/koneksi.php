@@ -1,12 +1,11 @@
 <?php
-$host = "localhost";
+$host = "db";
 $user = "root";
-$pass = "";
-$db = "campushub";
+$pass = "root";
+$db   = "campushub";
 
-$koneksi = mysqli_connect($host, $user,$pass,$db);
-if (!$koneksi){
-    die ("gagal terhubung");
-}else{
-    echo "koneksi berhasil";
+$koneksi = mysqli_connect($host, $user, $pass, $db);
+if (!$koneksi) {
+    die("gagal terhubung: " . mysqli_connect_error());
 }
+?>

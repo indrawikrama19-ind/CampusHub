@@ -1,4 +1,4 @@
-﻿name: CampusHub CI/CD Pipeline
+name: CampusHub CI/CD Pipeline
 
 on:
   push:
@@ -12,11 +12,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Validate PHP Syntax
+      - name: Build and Run Docker Compose
         run: |
-          find . -name "*.php" -exec php -l {} +
-
-      - name: Deploy Application
-        run: |
-          echo "Menjalankan deployment..."
-          echo "Deployment berhasil!"
+          docker compose up -d --build
